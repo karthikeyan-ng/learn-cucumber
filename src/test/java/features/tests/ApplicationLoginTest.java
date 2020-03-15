@@ -44,17 +44,12 @@ public class ApplicationLoginTest {
         System.out.println("The Then Condition: Verify User has successfully logged in.");
     }
 
-    @And("^Cards are displayed$")
-    public void verify_CardsAreDisplayed() {
-        // Write a logic to verify Logged In Users Cards information displayed
-
-        System.out.println("The And Condition: Verify Logged In Users Cards Displayed.");
-    }
-
-    @And("^Cards are not displayed$")
-    public void verify_CardsAreNotDisplayed() {
-        // Write a logic to verify Logged In Users Cards information NOT displayed
-
-        System.out.println("The And Condition: Verify Logged In Users Cards NOT Displayed.");
+    @And("^Cards are displayed \"([^\"]*)\"$")
+    public void verify_CardInformation(String cardsEnabled) {
+        if(Boolean.valueOf(cardsEnabled)) {
+            System.out.println("For the Given user Card Information has been enabled");
+        } else {
+            System.out.println("For the Given user Card Information has not been enabled.");
+        }
     }
 }
