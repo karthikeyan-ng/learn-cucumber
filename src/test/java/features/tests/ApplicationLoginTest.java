@@ -31,6 +31,12 @@ public class ApplicationLoginTest {
         System.out.println("The When Condition: User login into application with username and password");
     }
 
+    @When("^User login into application with username \"([^\"]*)\" and password \"([^\"]*)\"$")
+    public void when_UserLoginWithGivenUsernameAndPassword(String username, String password) {
+        // Write code here that turns the phrase above into concrete actions
+        System.out.println("Username = " + username + " Password = " + password);
+    };
+
     @Then("^Home page is populated$")
     public void verify_HomePageLoaded() {
         // Write a logic to verify Home Page Loaded or not
@@ -43,5 +49,12 @@ public class ApplicationLoginTest {
         // Write a logic to verify Logged In Users Cards information displayed
 
         System.out.println("The And Condition: Verify Logged In Users Cards Displayed.");
+    }
+
+    @And("^Cards are not displayed$")
+    public void verify_CardsAreNotDisplayed() {
+        // Write a logic to verify Logged In Users Cards information NOT displayed
+
+        System.out.println("The And Condition: Verify Logged In Users Cards NOT Displayed.");
     }
 }
