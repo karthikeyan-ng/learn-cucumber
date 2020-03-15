@@ -1,6 +1,8 @@
 package features.tests;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class ApplicationLoginTest {
@@ -26,5 +28,17 @@ public class ApplicationLoginTest {
         System.out.println("The When Condition: User login into application with username and password");
     }
 
+    @Then("^Home page is populated$")
+    public void verify_HomePageLoaded() {
+        // Write a logic to verify Home Page Loaded or not
 
+        System.out.println("The Then Condition: Verify User has successfully logged in.");
+    }
+
+    @And("^Cards are displayed$")
+    public void verify_CardsAreDisplayed() {
+        // Write a logic to verify Logged In Users Cards information displayed
+
+        System.out.println("The And Condition: Verify Logged In Users Cards Displayed.");
+    }
 }
