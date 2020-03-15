@@ -4,7 +4,10 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.api.junit.Cucumber;
+import org.junit.runner.RunWith;
 
+@RunWith(Cucumber.class)
 public class ApplicationLoginTest {
 
     @Given("^User is on NetBanking landing page$")
